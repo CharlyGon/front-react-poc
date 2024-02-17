@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 20px;
+}
+
+.check-button {
+    margin-top: 10px;
+}
+
+
+.loading-message-container {
+    margin-top: 20px;
+}
+
+.response-message-container {
+    margin-top: 20px;
+}
+
+.response-message-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+.response-message-container a {
+    color: blue;
+    text-decoration: underline;
+}

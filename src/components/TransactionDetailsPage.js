@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './TransactionDetailsPage.css';
 
 function TransactionDetailsPage() {
   const { transactionHash } = useParams();
@@ -28,30 +29,33 @@ function TransactionDetailsPage() {
   };
 
   return (
-    <div>
-      <h1>Transaction Details Page</h1>
-      <p>Transaction Hash: {transactionHash}</p>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Paste Hash:
-          <input type="text" value={inputHash} onChange={handleChange} />
-        </label>
-        <button type="submit" disabled={isLoading}>Check Hash</button>
-      </form>
-      {isLoading && <p>Verifying hash...</p>}
-      {message && (
-        <p>
-          {message.includes('Transaccion encontrada en PolygonScan:') && (
-            <a href={message.split(': ')[1]} target="_blank" rel="noopener noreferrer">
-              Ver en PolygonScan
-            </a>
+    <div className="container">
+      <h1>Transaction Details</h1>
+      <div className="form-container">
+        <p>Hash to search: {transactionHash}</p>
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
+            <input type="text" value={inputHash} onChange={handleChange} placeholder="Paste Hash" />
+          </div>
+          <button className="check-button" type="submit" disabled={isLoading}>Check Hash</button>
+        </form>
+        <div className="loading-message-container">
+          {isLoading && <p>Verifying hash...</p>}
+        </div>
+        <div className="response-message-container">
+          {message && (
+            <div style={{ minHeight: '50px' }}>
+              {message.includes('Transaccion encontrada en PolygonScan:') && (
+                <a href={message.split(': ')[1]} target="_blank" rel="noopener noreferrer">
+                  Ver en PolygonScan
+                </a>
+              )}
+            </div>
           )}
-        </p>
-      )}
+        </div>
+      </div>
     </div>
   );
 }
 
 export default TransactionDetailsPage;
-
-

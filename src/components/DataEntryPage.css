@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    margin: 20px;
+}
+
+.form-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.input-container {
+    width: 120%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.response-message-container {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+}
+
+.loading-message-container {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}

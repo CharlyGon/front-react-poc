@@ -1,0 +1,49 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0; /* Elimina el espacio en blanco entre los elementos */
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 2%; /* Ajusta el espacio entre los elementos */
+    border-right: 1px solid #fff; /* Agrega un separador visual */
+    padding-right: 2%; /* Añade un espacio entre el texto y el separador */
+    font-size: 16px; /* Restablece el tamaño de la fuente para evitar problemas de herencia */
+}
+
+.nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+    border-right: none; /* Elimina el separador visual del último elemento */
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px; /* Añade el espaciado alrededor del enlace */
+}
+
+.nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav ul li {
+        display: block;
+        margin: 10px 0;
+        /* Espaciado entre elementos en pantallas pequeñas */
+    }
+}

@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# React Polygon POC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es un Proof of Concept (POC) que muestra cómo interactuar con la red Polygon (Mumbai Testnet) desde una aplicación web React. Permite a los usuarios enviar un mensaje a una API backend implementada en .NET, que a su vez interactúa con la blockchain de Polygon para obtener un hash de transacción. Este hash se puede pegar en la página Transaction Info, la cual proporciona un enlace a Polygon Scan para ver detalles adicionales sobre la transacción.
 
-## Available Scripts
+## Tabla de Contenidos
 
-In the project directory, you can run:
+- [React Polygon POC](#react-polygon-poc)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+  - [Créditos](#créditos)
+  - [Contacto](#contacto)
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Antes de comenzar, asegúrate de tener Node.js y npm instalados en tu sistema.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta el directorio del proyecto en tu terminal.
+3. Ejecuta el comando `npm install` para instalar las dependencias.
+4. Una vez completada la instalación, puedes iniciar la aplicación con el comando `npm start`.
 
-### `npm test`
+## Uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez que la aplicación esté en funcionamiento, puedes acceder a la página principal para enviar un mensaje. Completa el campo de entrada con tu mensaje y haz clic en el botón "Submit". La aplicación enviará el mensaje a la API backend y mostrará el hash de transacción resultante, el cual podrás copiar y pegar en la página Transaction Info. En la página Transaction Info, pega el hash en el campo correspondiente y haz clic en el botón "Check Hash". Esto te proporcionará un enlace a Polygon Scan para ver más detalles sobre la transacción.
 
-### `npm run build`
+## Créditos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este proyecto fue desarrollado por [Gonzalo Fernández].
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contacto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme en [Fernandez-gonza@hotmail.com].
