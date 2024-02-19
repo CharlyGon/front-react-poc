@@ -28,6 +28,18 @@ function TransactionDetailsPage() {
     setInputHash(e.target.value);
   };
 
+  const extractUrlFromMessage = (message) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/;
+    const urlMatch = message.match(urlRegex);
+    if (urlMatch && urlMatch.length > 0) {
+      return urlMatch[0];
+    } else {
+      return null;
+    }
+  };
+
+  const url = message ? extractUrlFromMessage(message) : null;
+
   return (
     <div className="container">
       <h1>Transaction Details</h1>
@@ -45,8 +57,8 @@ function TransactionDetailsPage() {
         <div className="response-message-container">
           {message && (
             <div style={{ minHeight: '50px' }}>
-              {message.includes('Transaccion encontrada en PolygonScan:') && (
-                <a href={message.split(': ')[1]} target="_blank" rel="noopener noreferrer">
+              {url && (
+                <a href={url} target="_blank" rel="noopener noreferrer">
                   Ver en PolygonScan
                 </a>
               )}
